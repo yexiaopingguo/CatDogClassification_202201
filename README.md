@@ -1,4 +1,4 @@
-**English** | [简体中文](./README.zh-CN.md)
+**English** | [简体中文](./README.zh-CN.md)（测试中...敬请期待）
 <h1 align="center">Cnn-Classification-Dog-Vs-Cat 猫狗辨别</h1>
 
  (pytorch版本) CNN Resnet18 的猫狗分类器，基于ResNet及其变体网路系列，对于一般的图像识别任务表现优异，模型精准度高达93%（小型样本）。
@@ -34,7 +34,7 @@
 ![Prediction set](https://github.com/yexiaopingguo/Cat-Dog-Classification/blob/main/pre_photo.png)
 
 ## 5 References
-[1]. 猫狗图像数据来源：
+- [1]. 猫狗图像数据来源：
 https://www.kaggle.com/c/dogs-vs-cats/data
-[2]. 参考kaggle竞赛奖牌获得者项目
+- [2]. 参考kaggle竞赛奖牌获得者项目
 https://www.kaggle.com/uysimty/keras-cnn-dog-or-cat-classification
