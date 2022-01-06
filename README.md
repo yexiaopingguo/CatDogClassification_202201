@@ -1,40 +1,40 @@
-# 猫狗识别
-## 基于ResNet及其变体网路系列，对于一般的图像识别任务表现优异
+**English** | [简体中文](./README.zh-CN.md)
+<h1 align="center">Cnn-Classification-Dog-Vs-Cat 猫狗辨别</h1>
 
-# cnn-classification-dog-vs-cat
-基于CNN的图像分类器，使用Kaggle的猫狗图片数据。
+ (pytorch版本) CNN Resnet18 的猫狗分类器，基于ResNet及其变体网路系列，对于一般的图像识别任务表现优异，模型精准度高达93%（小型样本）。
+![Resnet](https://github.com/yexiaopingguo/Cat-Dog-Classification/blob/main/resnet.png)
+
+项目制作于本科大三学习 [認識人工智慧AI：企業人工智慧] 课堂期间，正好遇上本人对这方面感兴趣的阶段，所以选择了入门的深度学习项目练手，希望做为兴趣点激励自己学习！距离DDL只剩几天了，现阶段时间和精力有限，遂没有自建神经网络，只是利用了已训练的常用网络进行深度学习，以后找机会补上。
 
 ## 1 requirement
 - python3
-- numpy >= 1.14.2
-- keras >= 2.1.6
-- tensorflow >= 1.6.0
-- h5py >= 2.7.0
-- python-gflags >= 3.1.2
-- opencv-python >= 3.4.0.12
+- matplotlib
+- numpy
+- pytorch
+- pandas
+- os
+- Images
 
 ## 2 Description of files
-- inputs: 猫狗图片样本数据，[[下载地址]](https://www.kaggle.com/c/dogs-vs-cats/data)，使用keras库中的[ImageDataGenerator](https://keras.io/preprocessing/image/)类读取，需要将每个类的图片放在单独命名的文件夹中存放；
-- train.py: 自建的简单CNN，训练后测试集精度约83%；
-- pre_train.py: 利用已训练的常用网络(基于[ImageNet](http://www.image-net.org/)数据集训练)，进行迁移学习，测试集精度约95%以上；
-- data_helper.py: 数据读取和预处理模块；
-- img_cnn.py: 基于TensorFlow的自定义简单卷积神经网络。
+- inputs: 包含猫狗训练和测试样本图片数据[[下载地址]](https://www.kaggle.com/c/dogs-vs-cats/data)，经过特殊改良，其中训练集包含1000笔狗狗图片、1000笔猫咪图片，测试集包含100笔猫狗混合图片；
+- dog_cat_classcial.ipynb：主文件，训练后测试集精度约 93%
+- ckpt_resnet18_catdog.pth：基于CNN的预测模型
+- preds_resnet18.csv：预测后结果储存位置
+- true_test.csv：一笔正确的资料数据
 
 ## 3 Start training
-- ### 训练自定义的小型CNN
+- ### 印出部分训练集图片
+![Training set](https://github.com/yexiaopingguo/Cat-Dog-Classification/blob/main/train_photo.png)
+- ### 在CNN（Resnet）的基础上进行深度学习
     ```shell
-    python train.py
-    ```
-- ### 在VGG16的基础上进行迁移学习
-    ```shell
-    python pre_train.py
+    dog_cat_classcial.ipynb
     ```
 
-## 4 Visualizing results in TensorBoard
-```shell
-tensorboard --logdir /"PATH_OF_CODE"/log/"TIMESTAMP"/summaries/
-```
+## 4 Output prediction results
+![Prediction set](https://github.com/yexiaopingguo/Cat-Dog-Classification/blob/main/pre_photo.png)
 
 ## 5 References
 [1]. 猫狗图像数据来源：
 https://www.kaggle.com/c/dogs-vs-cats/data
+[2]. 参考kaggle竞赛奖牌获得者项目
+https://www.kaggle.com/uysimty/keras-cnn-dog-or-cat-classification
