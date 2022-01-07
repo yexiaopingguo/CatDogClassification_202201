@@ -1,10 +1,17 @@
-**English** | [简体中文](./README.zh-CN.md)（测试中...敬请期待）
-<h1 align="center">Cnn-Classification-Dog-Vs-Cat 猫狗辨别</h1>
+**English** | [繁體中文](./README.zh-CN.md)（翻譯功能還在測試中...敬請期待）
+<h1 align="center">Cnn-Classification-Dog-Vs-Cat 貓狗辨別</h1>
 
- (pytorch版本) CNN Resnet18 的猫狗分类器，基于ResNet及其变体网路系列，对于一般的图像识别任务表现优异，模型精准度高达93%（小型样本）。
+<font color=red> (pytorch版本) CNN Resnet18 的貓狗分類器，數據集來源於kaggle經典分類問題：貓狗大戰，基於ResNet殘差網絡及其變體網路系列，模型預測精準度高達93%（本人自建正確數據集作為對比範本，判斷模型精準度）。</font>
+
+# 個人心得
+
+本項目製作於本科大三學習 [認識人工智慧AI：企業人工智慧] 課堂期間，正好遇上本人對這方面感興趣的階段，所以選擇了入門的深度學習項目練手，希望做為興趣點激勵自己學習！距離DDL只剩幾天了，現階段時間和精力有限，遂沒有自建神經網絡！參考了大量競賽獲獎選手作品，調用了已訓練的常用網絡進行深度學習，以後有時間一定會自己動手，補上殘差網絡的構建。
+
+# Resnet介紹
+
 ![Resnet](https://github.com/yexiaopingguo/Cat-Dog-Classification/blob/main/resnet.png)
 
-项目制作于本科大三学习 [認識人工智慧AI：企業人工智慧] 课堂期间，正好遇上本人对这方面感兴趣的阶段，所以选择了入门的深度学习项目练手，希望做为兴趣点激励自己学习！距离DDL只剩几天了，现阶段时间和精力有限，遂没有自建神经网络，只是利用了已训练的常用网络进行深度学习，以后找机会补上。
+# 項目簡介
 
 ## 1 requirement
 - python3
@@ -12,29 +19,42 @@
 - numpy
 - pytorch
 - pandas
-- os
 - Images
 
 ## 2 Description of files
-- inputs: 包含猫狗训练和测试样本图片数据[[下载地址]](https://www.kaggle.com/c/dogs-vs-cats/data)，经过特殊改良，其中训练集包含1000笔狗狗图片、1000笔猫咪图片，测试集包含100笔猫狗混合图片；
-- dog_cat_classcial.ipynb：主文件，训练后测试集精度约 93%
-- ckpt_resnet18_catdog.pth：基于CNN的预测模型
-- preds_resnet18.csv：预测后结果储存位置
-- true_test.csv：一笔正确的资料数据
+- inputs: 包含train和test數據集，來源於kaggle平台經典分類問題（貓狗大戰）[[下載地址]](https://www.kaggle.com/c/dogs-vs-cats/data)，作為入門學習，為了讓電腦處理的快一點，我把數據集數量縮小了十倍；
 
-## 3 Start training
-- ### 印出部分训练集图片
+- dog_cat_classcial.ipynb：<font color=red>主文件</font>，Github支持在綫預覽
+
+- ckpt_resnet18_catdog.pth：基於Resnet18的預測模型
+
+- preds_resnet18.csv：預測後結果的儲存文件
+
+- true_test.csv：關於測試集的正確預測文件
+
+#### 訓練集樣本圖片
 ![Training set](https://github.com/yexiaopingguo/Cat-Dog-Classification/blob/main/train_photo.png)
-- ### 在CNN（Resnet）的基础上进行深度学习
+
+## 3 Start training（請運行dog_cat_classcial.ipynb文件）
+- ### 在CNN（Resnet殘差網絡）的基礎上進行深度學習
     ```shell
-    dog_cat_classcial.ipynb
+  # download the pretrained model
+  import torchvision.models as models
+  model = models.resnet18(pretrained = True)
+  model
+
+  # switch device to gpu if available
+  device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
     ```
 
 ## 4 Output prediction results
 ![Prediction set](https://github.com/yexiaopingguo/Cat-Dog-Classification/blob/main/pre_photo.png)
+<font color=red>精準度高達百分之九十三</font>
 
 ## 5 References
-- [1]. 猫狗图像数据来源：
+- [1]. 貓狗圖片數據來源：
 https://www.kaggle.com/c/dogs-vs-cats/data
-- [2]. 参考kaggle竞赛奖牌获得者项目
+- [2].參考kaggle競賽銅牌獲得者項目
 https://www.kaggle.com/uysimty/keras-cnn-dog-or-cat-classification
+- [3].Resnet殘差網絡介紹
+https://blog.csdn.net/qq_41760767/article/details/97917419?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522164153307016780274186801%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&request_id=164153307016780274186801&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2
