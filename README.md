@@ -1,13 +1,13 @@
 **English** | [繁體中文](./README.zh-CN.md)（翻譯功能還在測試中...敬請期待）
 <h1 align="center">Cnn-Classification-Dog-Vs-Cat 貓狗辨別</h1>
 
-<font color=red> (pytorch版本) CNN Resnet18 的貓狗分類器，數據集來源於kaggle經典分類問題：貓狗大戰，基於ResNet殘差網絡及其變體網路系列，模型預測精準度高達93%（本人自建正確數據集作為對比範本，判斷模型精準度）。</font>
+**(pytorch版本) CNN Resnet18 的貓狗分類器，數據集來源於kaggle經典分類問題：貓狗大戰，基於ResNet殘差網絡及其變體網路系列，模型預測精準度高達93%（本人自建正確數據集作為對比範本，判斷模型精準度）。**
 
 # 個人心得
 
 本項目製作於本科大三學習 [認識人工智慧AI：企業人工智慧] 課堂期間，正好遇上本人對這方面感興趣的階段，所以選擇了入門的深度學習項目練手，希望做為興趣點激勵自己學習！距離DDL只剩幾天了，現階段時間和精力有限，遂沒有自建神經網絡！參考了大量競賽獲獎選手作品，調用了已訓練的常用網絡進行深度學習，以後有時間一定會自己動手，補上殘差網絡的構建。
 
-# Resnet介紹
+# 經典網絡Resnet介紹
 
 ![Resnet](https://github.com/yexiaopingguo/Cat-Dog-Classification/blob/main/resnet.png)
 
@@ -36,7 +36,7 @@
 ![Training set](https://github.com/yexiaopingguo/Cat-Dog-Classification/blob/main/train_photo.png)
 
 ## 3 Start training（請運行dog_cat_classcial.ipynb文件）
-- ### 在CNN（Resnet殘差網絡）的基礎上進行深度學習
+- ### Resnet18殘差網絡的基礎上進行深度學習
     ```shell
   # download the pretrained model
   import torchvision.models as models
@@ -49,7 +49,7 @@
 
 ## 4 Output prediction results
 ![Prediction set](https://github.com/yexiaopingguo/Cat-Dog-Classification/blob/main/pre_photo.png)
-<font color=red>精準度高達百分之九十三</font>
+**精準度高達百分之九十三**
 
 ## 5 References
 - [1]. 貓狗圖片數據來源：
