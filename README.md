@@ -25,7 +25,7 @@ Resnet對每層的輸入做一個reference（X）, 學習形成殘差函數， �
 
 而在 RestNet網絡中學習的殘差函數是F(x) = H(x) - x, 這裡如果F(x) = 0, 那麼就是所謂的恆等映射（H(x) = x）。事實上，RestNet是“shortcut connections”的在connections是在恆等映射下的特殊情況，它沒有引入額外的參數和計算的複雜度。
 
-我自己總結一下，用簡單的話來説，
+我自己總結一下，用簡單的話來説，就是
 
 # 項目流程
 
