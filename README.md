@@ -13,14 +13,10 @@
 
 ResNet在2015年被提出，在ImageNet比賽classification任務上獲得第一名，因為它“簡單與實用”並存，在檢測、分割、識別等領域裡得到廣泛的應用。它使用了一種連接方式叫做“shortcut connection”，顧名思義就是“抄近道”的意思。
 
-![圖2-Classical deep](https://github.com/yexiaopingguo/Cat-Dog-Classification/blob/main/photo/classical_deep.png)![圖3-Short cut](https://github.com/yexiaopingguo/Cat-Dog-Classification/blob/main/photo/shortcut.png)
+<img src="https://github.com/yexiaopingguo/Cat-Dog-Classification/blob/main/photo/classical_deep.png" width="300"/>
+<img src="https://github.com/yexiaopingguo/Cat-Dog-Classification/blob/main/photo/shortcut.png" width="300"/>
 
 本人對Resnet的理解是
-
-<figure class="half">
-   <img src="https://github.com/yexiaopingguo/Cat-Dog-Classification/blob/main/photo/classical_deep.png" width="300"/>
-    <img src="https://github.com/yexiaopingguo/Cat-Dog-Classification/blob/main/photo/shortcut.png" width="300"/>
-</figure>
 
 # 項目流程
 
