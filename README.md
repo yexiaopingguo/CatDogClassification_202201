@@ -17,6 +17,11 @@ ResNet在2015年被提出，在ImageNet比賽classification任務上獲得第一
 
 本人對Resnet的理解是
 
+<center class="half">
+    <img src="https://github.com/yexiaopingguo/Cat-Dog-Classification/blob/main/photo/classical_deep.png" width="300"/>
+    <img src="https://github.com/yexiaopingguo/Cat-Dog-Classification/blob/main/photo/shortcut.png" width="300"/>
+</center>
+
 # 項目流程
 
 ## 1 requirement
@@ -63,5 +68,7 @@ ResNet在2015年被提出，在ImageNet比賽classification任務上獲得第一
 https://www.kaggle.com/c/dogs-vs-cats/data
 - [2].參考kaggle競賽銅牌獲得者項目
 https://www.kaggle.com/uysimty/keras-cnn-dog-or-cat-classification
-- [3].Resnet殘差網絡介紹
+- [3].Resnet殘差網絡介紹:
+
 https://blog.csdn.net/qq_41760767/article/details/97917419
+https://www.bilibili.com/video/BV1CT4y1F7KU?share_source=copy_web
