@@ -25,7 +25,7 @@ Resnet對每層的輸入做一個reference（X）, 學習形成殘差函數， �
 
 而在 RestNet網絡中學習的殘差函數是F(x) = H(x) - x, 這裡如果F(x) = 0, 那麼就是所謂的恆等映射（H(x) = x）。事實上，RestNet是“shortcut connections”的在connections是在恆等映射下的特殊情況，它沒有引入額外的參數和計算的複雜度。
 
-我自己總結一下，Resnet用簡單的話來説，就是他會同時對比捲積之後和同等映射的結果，如果判斷經過捲積之後得到的是不好的結果，他就會把捲積層的參數設為0，原封不動的跳過這層捲積的作用
+**我自己總結一下**，Resnet用簡單的話來説，就是他會同時對比捲積之後和同等映射的結果，如果判斷經過捲積之後得到的是不好的結果，他就會把捲積層的參數設為0，原封不動的跳過這層捲積的作用
 
 
 
@@ -55,7 +55,7 @@ Resnet對每層的輸入做一個reference（X）, 學習形成殘差函數， �
 ![Training set](https://github.com/yexiaopingguo/Cat-Dog-Classification/blob/main/photo/train_photo.png)
 
 ## 3 Start training
-- ### Resnet18殘差網絡的基礎上進行深度學習
+- ### 使用GPU在Resnet18殘差網絡的基礎上進行深度學習
     ```shell
   # download the pretrained model
   import torchvision.models as models
