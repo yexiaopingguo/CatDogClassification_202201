@@ -1,7 +1,7 @@
-**English** | [繁體中文](./README.zh-CN.md)（翻譯功能還在測試中...敬請期待）
+**English** | [繁體中文](./README.zh-CN.md)（本人有點懶，翻譯功能怠工中，敬請期待....）
 <h1 align="center">Cnn-Classification-Dog-Vs-Cat 貓狗辨別</h1>
 
-**(pytorch版本) CNN Resnet18 的貓狗分類器，數據集來源於kaggle經典分類問題：貓狗大戰，基於ResNet殘差網絡及其變體網路系列，模型預測精準度高達93%（本人自建正確數據集作為對比範本，判斷模型精準度）。**
+**(pytorch版本) CNN Resnet18 的貓狗分類器，數據集來源於kaggle經典分類問題：貓狗大戰，基於ResNet殘差網絡及其變體網路系列，模型預測精準度高達93%（本人自建數據集正確標簽作為對比範本，判斷模型精準度）。**
 
 # 個人心得
 
@@ -9,9 +9,15 @@
 
 # 經典網絡Resnet介紹
 
-![Resnet](https://github.com/yexiaopingguo/Cat-Dog-Classification/blob/main/resnet.png)
+![圖1-Resnet](https://github.com/yexiaopingguo/Cat-Dog-Classification/blob/main/photo/resnet.png)
 
-# 項目簡介
+ResNet在2015年被提出，在ImageNet比賽classification任務上獲得第一名，因為它“簡單與實用”並存，在檢測、分割、識別等領域裡得到廣泛的應用。它使用了一種連接方式叫做“shortcut connection”，顧名思義就是“抄近道”的意思。
+
+![圖2-Classical deep](https://github.com/yexiaopingguo/Cat-Dog-Classification/blob/main/photo/classical_deep.png)![圖3-Short cut](https://github.com/yexiaopingguo/Cat-Dog-Classification/blob/main/photo/shortcut.png)
+
+本人對Resnet的理解是
+
+# 項目流程
 
 ## 1 requirement
 - python3
@@ -33,9 +39,9 @@
 - true_test.csv：關於測試集的正確預測文件
 
 #### 訓練集樣本圖片
-![Training set](https://github.com/yexiaopingguo/Cat-Dog-Classification/blob/main/train_photo.png)
+![Training set](https://github.com/yexiaopingguo/Cat-Dog-Classification/blob/main/photo/train_photo.png)
 
-## 3 Start training（請運行dog_cat_classcial.ipynb文件）
+## 3 Start training
 - ### Resnet18殘差網絡的基礎上進行深度學習
     ```shell
   # download the pretrained model
@@ -46,10 +52,11 @@
   # switch device to gpu if available
   device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
     ```
+**更多内容請運行主文件dog_cat_classcial.ipynb主文件**
 
 ## 4 Output prediction results
-![Prediction set](https://github.com/yexiaopingguo/Cat-Dog-Classification/blob/main/pre_photo.png)
-**精準度高達百分之九十三**
+![Prediction set](https://github.com/yexiaopingguo/Cat-Dog-Classification/blob/main/photo/pre_photo.png)
+**模型預測精準度高達百分之九十三**
 
 ## 5 References
 - [1]. 貓狗圖片數據來源：
@@ -57,4 +64,4 @@ https://www.kaggle.com/c/dogs-vs-cats/data
 - [2].參考kaggle競賽銅牌獲得者項目
 https://www.kaggle.com/uysimty/keras-cnn-dog-or-cat-classification
 - [3].Resnet殘差網絡介紹
-https://blog.csdn.net/qq_41760767/article/details/97917419?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522164153307016780274186801%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&request_id=164153307016780274186801&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2
+https://blog.csdn.net/qq_41760767/article/details/97917419
