@@ -17,10 +17,10 @@ ResNet在2015年被提出，在ImageNet比賽classification任務上獲得第一
 
 本人對Resnet的理解是
 
-<center class="half">
-    <img src="https://github.com/yexiaopingguo/Cat-Dog-Classification/blob/main/photo/classical_deep.png" width="300"/>
+<figure class="half">
+   <img src="https://github.com/yexiaopingguo/Cat-Dog-Classification/blob/main/photo/classical_deep.png" width="300"/>
     <img src="https://github.com/yexiaopingguo/Cat-Dog-Classification/blob/main/photo/shortcut.png" width="300"/>
-</center>
+</figure>
 
 # 項目流程
 
