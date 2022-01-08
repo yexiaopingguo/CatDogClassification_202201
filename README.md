@@ -11,7 +11,7 @@
 
 ![圖1-Resnet](https://github.com/yexiaopingguo/Cat-Dog-Classification/blob/main/photo/resnet.png)
 
-ResNet在2015年被提出，在ImageNet比賽classification任務上獲得第一名，因為它“簡單與實用”並存，在檢測、分割、識別等領域裡得到廣泛的應用。它使用了一種連接方式叫做“shortcut connection”，顧名思義就是**“抄近道”**的意思，下面是這個resnet的網絡結構：
+ResNet在2015年被提出，在ImageNet比賽classification任務上獲得第一名，因為它“簡單與實用”並存，在檢測、分割、識別等領域裡得到廣泛的應用。它使用了一種連接方式叫做“shortcut connection”，顧名思義就是“抄近道”的意思，下面是這個resnet的網絡結構：
 
 <img src="https://github.com/yexiaopingguo/Cat-Dog-Classification/blob/main/photo/shortcut.png" width="300"/>
 
@@ -19,12 +19,13 @@ ResNet在2015年被提出，在ImageNet比賽classification任務上獲得第一
 
 <img src="https://github.com/yexiaopingguo/Cat-Dog-Classification/blob/main/photo/classical_deep.png" width="300"/>
 
-而Resnet對每層的輸入做一個reference（X）, 學習形成殘差函數， 不學習一些沒有reference（X）的函數，這種殘差函數更容易優化，能使網絡層數大大加深。
+Resnet對每層的輸入做一個reference（X）, 學習形成殘差函數， 不學習一些沒有reference（X）的函數，這種殘差函數更容易優化，能使網絡層數大大加深。
 
-如果在一個淺層網絡的基礎上疊加y=x的層（稱identity mappings，恆等映射），可以讓網絡隨深度增加而不退化，這反映了多層非線性網絡無法逼近恆等映射網絡。但是，在深度學習中我們希望有更好性能的網絡，而網絡不退化也不是我們的目的。
+如果在一個淺層網絡的基礎上疊加y=x的層（稱identity mappings，恆等映射），可以讓網絡隨深度增加而不退化，這反映了多層非線性網絡無法逼近恆等映射網絡。但是在深度學習中，我們希望有更好性能的網絡，網絡不退化并不是我們的目的。
 
-而在 RestNet网络中学习的残差函数是F(x) = H(x) - x, 这里如果F(x) = 0, 那么就是所謂的恒等映射（H(x) = x）。事实上，RestNet是“shortcut connections”的在connections是在恒等映射下的特殊情况，它没有引入额外的参数和计算的复杂度。
+而在 RestNet網絡中學習的殘差函數是F(x) = H(x) - x, 這裡如果F(x) = 0, 那麼就是所謂的恆等映射（H(x) = x）。事實上，RestNet是“shortcut connections”的在connections是在恆等映射下的特殊情況，它沒有引入額外的參數和計算的複雜度。
 
+我自己總結一下，用簡單的話來説，
 
 # 項目流程
 
