@@ -41,13 +41,14 @@ ResNet是何凱明等人在2015年提出的模型，獲得了CVPR最佳論文獎
 
 最後，讓神經網絡去求解大量的結果已知的問題。通過這個過程，它就“學會”了神經元之間應該如何連接，所以它就能成功地識別貓和狗的測試數據中，哪些模式可以產生正確的結果。
 
-這種神經網絡的早期例子是稱為感知器的單層系統，它可以模擬單個神經元。感知器的概念是Frank Rosenblatt在1962年提出的。感知器的典型結構如下圖片所示：
+這種神經網絡的早期例子是稱為感知器的單層系統，它可以模擬單個神經元。感知器的概念是Frank Rosenblatt在1962年提出的。感知器的典型結構如圖片所示：
 <img src="https://github.com/yexiaopingguo/Cat-Dog-Classification/blob/main/photo/utensils.jpg" width="300"/>
 感知器有 n 個輸入，X1、X2、Xn，每個輸入都乘以一個權重因子 Wi 再相加，和為 w1X1+w2X2+...+wnXn。如果這個結果比某個臨界值 C 大，就返回 1，否則，就返回 0。就是說，當 w1X1+w2X2+...+wnXn-C>0 就返回 1，而 w1X1+w2X2+...+wnXn-C<=0 就返回 0。
 
 在貓狗識別的例子中，Xi就是提取的圖像的特徵，訓練感知器的過程包括找到合適的權重因子 wi 和臨界值 C 使得感知器識別到正確的數字。如果你從圖像中提取的特徵不只是兩個，也可以在更高的維度上使用相同的辦法。
 
 因此，深度學習可以應用於貓狗分類器的問題上。
+
 <img src="https://github.com/yexiaopingguo/Cat-Dog-Classification/blob/main/photo/cat_dog.jpg" width="300"/>
 
 ## 項目流程（實戰Resnet神經網絡——貓狗分類器）
