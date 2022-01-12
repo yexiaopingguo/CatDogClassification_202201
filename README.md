@@ -67,7 +67,7 @@ ResNet是何凱明等人在2015年提出的模型，獲得了CVPR最佳論文獎
   # switch device to gpu if available
   device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
     ```
-**更多内容請運行主文件dog_cat_classcial.ipynb主文件**
+**更多内容請運行主文件dog_cat_classcial.ipynb主文件，Github支持在綫預覽....**
 
 ### 4 Output prediction results
 ![Prediction set](https://github.com/yexiaopingguo/Cat-Dog-Classification/blob/main/photo/pre_photo.png)
