@@ -32,9 +32,9 @@ ResNet是何凱明等人在2015年提出的模型，獲得了CVPR最佳論文獎
 
 **我自己總結一下**，Resnet用簡單的話來説，就是他會同時對比捲積之後和同等映射的結果，如果判斷經過捲積之後得到的是不好的結果，他就會把捲積層的參數設為0，原封不動的跳過這層捲積的作用。
 
-# 項目流程（實戰Resnet神經網絡——貓狗分類器）
+## 項目流程（實戰Resnet神經網絡——貓狗分類器）
 
-## 1 requirement
+### 1. requirement
 - python3
 - matplotlib
 - numpy
@@ -42,7 +42,7 @@ ResNet是何凱明等人在2015年提出的模型，獲得了CVPR最佳論文獎
 - pandas
 - Images
 
-## 2 Description of files
+### 2. Description of files
 - inputs: 包含train和test數據集，來源於kaggle平台經典分類問題（貓狗大戰）[[下載地址]](https://www.kaggle.com/c/dogs-vs-cats/data)，作為入門學習，為了讓電腦處理的快一點，我把數據集數量縮小了十倍；
 
 - dog_cat_classcial.ipynb：<font color=red>主文件</font>，Github支持在綫預覽
@@ -53,11 +53,11 @@ ResNet是何凱明等人在2015年提出的模型，獲得了CVPR最佳論文獎
 
 - true_test.csv：關於測試集的正確預測文件
 
-#### 訓練集樣本圖片
+##### 訓練集樣本圖片
 ![Training set](https://github.com/yexiaopingguo/Cat-Dog-Classification/blob/main/photo/train_photo.png)
 
-## 3 Start training
-- ### 使用GPU在Resnet18殘差網絡的基礎上進行深度學習
+### 3 Start training
+- ##### 使用GPU在Resnet18殘差網絡的基礎上進行深度學習
     ```shell
   # download the pretrained model
   import torchvision.models as models
@@ -69,11 +69,11 @@ ResNet是何凱明等人在2015年提出的模型，獲得了CVPR最佳論文獎
     ```
 **更多内容請運行主文件dog_cat_classcial.ipynb主文件**
 
-## 4 Output prediction results
+### 4 Output prediction results
 ![Prediction set](https://github.com/yexiaopingguo/Cat-Dog-Classification/blob/main/photo/pre_photo.png)
 **模型預測精準度高達百分之九十三**
 
-## 5 References
+### 5 References
 - [1]. <Deep Residual Learning for Image Recognition>Kaiming He,Xiangyu Zhang,Shaoqing Ren,Jian Sun
 https://arxiv.org/pdf/1512.03385.pdf
 - [2]. 貓狗圖片數據來源：
