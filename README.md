@@ -43,15 +43,15 @@ ResNet是何凱明等人在2015年提出的模型，獲得了CVPR最佳論文獎
 - Images
 
 ### 2. 文件描述
-- inputs: 包含train和test數據集，來源於kaggle平台經典分類問題（貓狗大戰）[[下載地址]](https://www.kaggle.com/c/dogs-vs-cats/data)，作為入門學習，為了讓電腦處理的快一點，我把數據集數量縮小了十倍；
+- inputs: 包含train和test數據集，來源於kaggle平台經典分類問題--貓狗大戰[[下載地址]](https://www.kaggle.com/c/dogs-vs-cats/data)，初次接觸深度學習，我希望我的學習重心能夠放在學習的過程上，所以我縮小了官網的train和test數據集（把官網的25000筆訓練集縮減為2000筆，10000筆測試集縮減為100筆），并且手動為test測試集標注上了正確的標簽，方便和預測結果做對比；
 
-- dog_cat_classcial.ipynb：<font color=red>主文件</font>，Github支持在綫預覽
+- dog_cat_classcial.ipynb：<font color=red>主文件</font>，Github支持在綫預覽；
 
-- ckpt_resnet18_catdog.pth：基於Resnet18的預測模型
+- ckpt_resnet18_catdog.pth：基於Resnet18的預測模型；
 
-- preds_resnet18.csv：預測後結果的儲存文件
+- preds_resnet18.csv：預測後結果的儲存文件；
 
-- true_test.csv：關於測試集的正確預測文件
+- true_test.csv：關於測試集的正確預測文件。
 
 ##### 訓練集樣本圖片
 ![Training set](https://github.com/yexiaopingguo/Cat-Dog-Classification/blob/main/photo/train_photo.png)
