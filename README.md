@@ -3,7 +3,7 @@
 
 **(pytorch版本) CNN Resnet18 的貓狗分類器，數據集來源於kaggle經典分類問題：貓狗大戰，基於ResNet殘差網絡及其變體網路系列，模型預測精準度高達93%（本人自建數據集正確標簽作為對比範本，判斷模型精準度）。**
 
-## 項目個人心得
+## 個人心得
 
 本項目製作於本科大三學習 [認識人工智慧AI：企業人工智慧] 課堂期間，正好碰上本人對這方面感興趣的階段，所以投入了一些熱情。我選擇實作CNN網路，從入門級別的深度學習項目練手，以此作爲興趣點激勵自己學習！在實作項目之前，我拜讀了2016年最火的頂會論文"Deep Residual Learning for Image Recognition"[[論文地址]](https://arxiv.org/pdf/1512.03385.pdf)。在瀏覽了一遍過後，説實話我是一頭霧水，畢竟在此之前我的基礎還停留在機器學習書面的理論階段。後來在網絡上看了很多篇有關於Resnet的結構解析、論文解讀的博客和Kaggle上很多競賽項目的實戰，才慢慢搞懂說這個東西到底在做什麽。Resnet的原理很好理解，但是他實作卻很難，科學家們花了好多年研究這一塊，最後被這群中國大佬玩家搞定，對此我表示大寫的佩服。由於本人現階段時間有限，遂沒有自建神經網絡。參考了大量競賽獲獎選手作品，調用了已訓練的常用網絡進行深度學習，以後有時間一定會自己動手，實戰一遍殘差網絡的構建。
 
@@ -17,7 +17,7 @@ ResNet是何凱明等人在2015年提出的模型，獲得了CVPR最佳論文獎
 
 在計算機視覺裡，網絡的深度是實現網絡好的效果的重要因素，有著至關重要的影響。層數深的網絡可以提取出圖片的低層、中層和高層特徵，輸入特徵的“等級”隨增網絡深度的加深而變高。然而繼續堆疊更多層會帶來很多問題：第一個問題就是梯度爆炸 / 消失（vanishing / exploding gradients），這可以通過BN和更好的網絡初始化解決；第二個問題就是退化（degradation）問題，即當網絡層數多得飽和了，加更多層進去會導致優化困難，且訓練誤差和預測誤差更大了，網路開始退化（當網路達到一定深度，增加網路層數會導致更大的誤差），如上圖所示：
 
-## 殘差結構
+## 殘差結構介紹
 
 <img src="https://github.com/yexiaopingguo/Cat-Dog-Classification/blob/main/photo/shortcut.png" width="300"/>
 
@@ -88,11 +88,11 @@ ResNet是何凱明等人在2015年提出的模型，獲得了CVPR最佳論文獎
     ```
 **更多内容請運行主文件dog_cat_classcial.ipynb主文件，Github支持在綫預覽....**
 
-### 4. 輸出預測結果
+### 4. 印出預測結果
 ![Prediction set](https://github.com/yexiaopingguo/Cat-Dog-Classification/blob/main/photo/pre_photo.png)
 **模型預測精準度高達百分之九十三**
 
-### 5. 參考項目
+## 5. 參考
 - [1]. Deep Residual Learning for Image Recognition,Kaiming He,Xiangyu Zhang,Shaoqing Ren,Jian Sun
 https://arxiv.org/pdf/1512.03385.pdf
 - [2]. 貓狗圖片數據來源：
