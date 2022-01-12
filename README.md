@@ -34,7 +34,7 @@ ResNet是何凱明等人在2015年提出的模型，獲得了CVPR最佳論文獎
 
 ## 項目流程（實戰Resnet神經網絡——貓狗分類器）
 
-### 1. requirement
+### 1. 需求
 - python3
 - matplotlib
 - numpy
@@ -42,7 +42,7 @@ ResNet是何凱明等人在2015年提出的模型，獲得了CVPR最佳論文獎
 - pandas
 - Images
 
-### 2. Description of files
+### 2. 文件描述
 - inputs: 包含train和test數據集，來源於kaggle平台經典分類問題（貓狗大戰）[[下載地址]](https://www.kaggle.com/c/dogs-vs-cats/data)，作為入門學習，為了讓電腦處理的快一點，我把數據集數量縮小了十倍；
 
 - dog_cat_classcial.ipynb：<font color=red>主文件</font>，Github支持在綫預覽
@@ -56,7 +56,7 @@ ResNet是何凱明等人在2015年提出的模型，獲得了CVPR最佳論文獎
 ##### 訓練集樣本圖片
 ![Training set](https://github.com/yexiaopingguo/Cat-Dog-Classification/blob/main/photo/train_photo.png)
 
-### 3 Start training
+### 3. 開始訓練
 - ##### 使用GPU在Resnet18殘差網絡的基礎上進行深度學習
     ```shell
   # download the pretrained model
@@ -69,11 +69,11 @@ ResNet是何凱明等人在2015年提出的模型，獲得了CVPR最佳論文獎
     ```
 **更多内容請運行主文件dog_cat_classcial.ipynb主文件，Github支持在綫預覽....**
 
-### 4 Output prediction results
+### 4. 輸出預測結果
 ![Prediction set](https://github.com/yexiaopingguo/Cat-Dog-Classification/blob/main/photo/pre_photo.png)
 **模型預測精準度高達百分之九十三**
 
-### 5 References
+### 5. 參考項目
 - [1]. <Deep Residual Learning for Image Recognition>Kaiming He,Xiangyu Zhang,Shaoqing Ren,Jian Sun
 https://arxiv.org/pdf/1512.03385.pdf
 - [2]. 貓狗圖片數據來源：
